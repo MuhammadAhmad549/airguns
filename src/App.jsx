@@ -1,33 +1,3 @@
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Navbar from './components/Navbar';
-// import Footer from './components/Footer';
-// import Home from './pages/Home';
-// import Products from './pages/Products';
-// import ProductDetails from './pages/ProductDetails';
-// import Manuals from './pages/Manuals';
-// import AboutUs from './pages/AboutUs';
-
-// function App() {
-//   return (
-//     <Router>
-//       <div className="flex flex-col min-h-screen">
-//         <Navbar />
-//         <main className="flex-grow">
-//           <Routes>
-//             <Route path="/" element={<Home />} />
-//             <Route path="/products" element={<Products />} />
-//             <Route path="/products/:id" element={<ProductDetails />} />
-//             <Route path="/manuals" element={<Manuals />} />
-//             <Route path="/about" element={<AboutUs />} />
-//           </Routes>
-//         </main>
-//         <Footer />
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default App;
 
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
@@ -39,7 +9,7 @@ import NotFound from './pages/NotFound';
 import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
 import Manuals from './pages/Manuals';
-import AboutUs from './pages/AboutUs';
+import Aboutus from './pages/AboutUs';
 import  './index.css'
 
 function AnimatedRoutes() {
@@ -110,7 +80,7 @@ function AnimatedRoutes() {
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
             >
-              <AboutUs />
+              <Aboutus />
               
             </motion.div>
 
