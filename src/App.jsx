@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
@@ -9,96 +7,46 @@ import NotFound from './pages/NotFound';
 import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
 import Manuals from './pages/Manuals';
-import Aboutus from './pages/AboutUs';
-import  './index.css'
+import Aboutus from './pages/Aboutus';
+import './index.css';
 
 function AnimatedRoutes() {
   const location = useLocation();
 
+  const pageTransition = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -50 },
+    transition: { duration: 0.5, ease: 'easeInOut' },
+  };
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
-              <Home />
-            </motion.div>
-          }
-        />
-         
-        <Route
-          path="/products"
-          element={
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
-              <Products />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/products/:id"
-          element={
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
-              <ProductDetails />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/manuals"
-          element={
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
-              <Manuals />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
-              <Aboutus />
-              
-            </motion.div>
-
-          }
-        />
-         <Route
-          path="*"
-          element={
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
-              <NotFound />
+        {[
+          { path: '/', Component: Home },
+          { path: '/products', Component: Products },
+          { path: '/products/:id', Component: ProductDetails },
+          { path: '/manuals', Component: Manuals },
+          { path: '/about', Component: Aboutus },
+          { path: '*', Component: NotFound },
+        ].map(({ path, Component }) => (
+          <Route
+            key={path}
+            path={path}
+            element={
+              <motion.div
+                initial={pageTransition.initial}
+                animate={pageTransition.animate}
+                exit={pageTransition.exit}
+                transition={pageTransition.transition}
+                className="px-4 sm:px-8 py-6 sm:py-10" // Mobile padding
+              >
+                <Component />
               </motion.div>
-          }
+            }
           />
+        ))}
       </Routes>
     </AnimatePresence>
   );
@@ -107,17 +55,9 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
-      {/* <div
-        className="flex flex-col min-h-screen"
-        style={{
-          backgroundImage: "url('./shootingstreet.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      ></div> */}
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen text-gray-800 bg-gray-50">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow overflow-x-hidden">
           <AnimatedRoutes />
         </main>
         <Footer />

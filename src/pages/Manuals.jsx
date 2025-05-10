@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFilePdf } from 'react-icons/fa'; // FontAwesome icon
+import { FaFilePdf } from 'react-icons/fa';
 
 export default function Manuals() {
   const manuals = [
@@ -9,39 +9,38 @@ export default function Manuals() {
   ];
 
   return (
-    <div className="px-6 py-10 max-w-7xl mx-auto">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Manuals</h1>
-        <p className="text-lg text-gray-600 font-semibold ">
-        Access detailed DIANA product manuals — preview online or download for your convenience.
+    <div className="px-4 sm:px-6 py-8 sm:py-10 max-w-7xl mx-auto">
+      <div className="text-center mb-10 sm:mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
+          Manuals
+        </h1>
+        <p className="text-base sm:text-lg text-gray-600 font-medium sm:font-semibold">
+          Access detailed DIANA product manuals — preview online or download for your convenience.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {manuals.map((manual) => (
           <div
             key={manual.id}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
           >
-            <div className="p-6 flex-grow flex flex-col">
-              {/* Title with Icon */}
-              <h2 className="text-xl font-semibold text-gray-700 flex items-center justify-center gap-2 mb-4">
-                <FaFilePdf className="text-red-500" />
-                {manual.title}
+            <div className="p-4 sm:p-6 flex-grow flex flex-col">
+              <h2 className="text-lg sm:text-xl font-semibold text-gray-700 flex items-center justify-center gap-2 mb-4 text-center">
+                <FaFilePdf className="text-red-500 text-xl" />
+                <span>{manual.title}</span>
               </h2>
 
-              {/* PDF Preview */}
-              <div className="flex-grow overflow-hidden rounded-lg border mb-6">
+              <div className="flex-grow overflow-hidden rounded-lg border mb-4 sm:mb-6">
                 <iframe
                   src={`${manual.pdfUrl}#toolbar=0`}
                   width="100%"
-                  height="250px"
+                  height="220px"
                   title={manual.title}
-                  className="w-full"
+                  className="w-full rounded-md"
                 ></iframe>
               </div>
 
-              {/* Download Button */}
               <a
                 href={manual.pdfUrl}
                 download
