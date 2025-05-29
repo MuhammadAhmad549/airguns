@@ -8,7 +8,6 @@ import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
 import Manuals from './pages/Manuals';
 import Aboutus from './pages/Aboutus';
-
 import  './index.css';
 
 
