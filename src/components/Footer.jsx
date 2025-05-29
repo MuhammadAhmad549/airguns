@@ -3,12 +3,12 @@ import { FaWhatsapp, FaFacebookF, FaTwitter, FaInstagram, FaEnvelope } from 'rea
 export default function Footer() {
   return (
     <>
-      {/* Floating WhatsApp Icon (Bottom-Right) */}
+      {/* Floating WhatsApp Icon */}
       <a
         href="https://wa.me/923023155306"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-10 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition z-50"
+        className="fixed bottom-8 right-5 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition z-50"
       >
         <FaWhatsapp size={24} />
       </a>
@@ -19,6 +19,17 @@ export default function Footer() {
           {/* Contact Info */}
           <div className="text-center md:text-left space-y-2">
             <h4 className="text-xl font-semibold">Contact Us</h4>
+            <div className="flex items-center justify-center md:justify-start gap-2">
+              <a
+                href="https://wa.me/923023155306"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-green-300 transition"
+              >
+                <FaWhatsapp className="text-green-400" />
+                <span>+92 302 3155306</span>
+              </a>
+            </div>
             <div className="flex items-center justify-center md:justify-start gap-2">
               <FaEnvelope className="text-red-400" />
               <span>contact@example.com</span>
@@ -32,7 +43,7 @@ export default function Footer() {
             <a href="#" className="hover:text-pink-400 transition"><FaInstagram /></a>
             <a href="#" className="hover:text-purple-400 transition">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M..." /> {/* Replace with a real icon or remove if not needed */}
+                <path d="M..." /> {/* Replace with a real icon or remove */}
               </svg>
             </a>
           </div>
