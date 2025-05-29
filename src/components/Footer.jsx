@@ -59,7 +59,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="text-center text-sm mt-6 border-t border-gray-700 pt-4">
           &copy; 2025 MySite. All rights reserved.
         </div>
