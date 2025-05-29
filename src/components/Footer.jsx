@@ -34,10 +34,7 @@ export default function Footer() {
             </div>
 
             {/* Email: contact@example.com */}
-            <div className="flex items-center justify-center md:justify-start gap-2">
-              <FaEnvelope className="text-red-400" />
-              <span>contact@example.com</span>
-            </div>
+          
 
             {/* Email: imran@paktire.com */}
             <div className="flex items-center justify-center md:justify-start gap-2">
