@@ -8,11 +8,9 @@ import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
 import Manuals from './pages/Manuals';
 import Aboutus from './pages/Aboutus';
-<<<<<<< HEAD
-import './index.css';
-=======
+
 import  './index.css';
->>>>>>> 316c441 (product and price updated)
+
 
 function AnimatedRoutes() {
   const location = useLocation();
