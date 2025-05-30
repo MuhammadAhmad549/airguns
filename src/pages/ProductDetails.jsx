@@ -138,6 +138,13 @@ export default function ProductDetail() {
           className="w-full h-60 sm:h-72 object-contain rounded-xl transition-transform duration-300 ease-in-out hover:scale-105"
         />
       </div>
+      <div className="flex justify-end mb-4">
+  <img
+    src="/logo.jpg"
+    alt="Diana Logo"
+    className="h-12 sm:h-16 object-contain"
+  />
+</div>
 
       {/* Title */}
       <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">

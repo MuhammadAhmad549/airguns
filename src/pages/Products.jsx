@@ -156,6 +156,13 @@ export default function Products() {
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden"
             >
               <div className="relative">
+                <div className="flex justify-end mb-4">
+  <img
+    src="/logo.jpg"
+    alt="Diana Logo"
+    className="h-4 sm:h-8 object-contain"
+  />
+</div>
                 <img
                   src={product.image}
                   alt={product.title}
