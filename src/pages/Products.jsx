@@ -26,7 +26,7 @@ export const productsData = [
   },
   {
     id: 2,
-    title: 'DIANA Two-Sixty Air Rifle cal. 4,5 mm',
+    title: 'DIANA Two-Sixty Air Rifle cal. 5.5 mm',
     image: '/p2.jpg',
     description: 'The DIANA two-sixty is a precision-engineered air rifle designed for consistent accuracy and solid performance. Featuring a rifled barrel and break barrel system, it is ideal for sport shooters and small game hunters.',
     specs: {
@@ -74,7 +74,7 @@ export const productsData = [
   },
   {
     id: 6,
-    title: 'Diana Outlaw PCP Air Rifle .25',
+    title: 'Diana Outlaw PCP Air Rifle 0.22',
     image: '/dianaoutlaw25.png',
     description: 'The Diana company has a reputation for building some of the highest quality, most solidly made, precision airguns in the last 100 years. The new management team at Diana recognizes the company’s fine tradition of quality and value and is dedicated to ensuring that new products maintain this tradition. The Outlaw is a PCP air rifle in the Sport Line from Diana. It offers impressive performance and features at an affordable price. The Outlaw sports an easy side-lever cocking and loading system, adjustable two-stage trigger, and very good accuracy via a special barrel and breech system. Its regulated action provides impressive consistency and shot count per fill. A color-coded pressure gauge shows air charge status, and a dust cover protects the probe-style fill port.',
     specs: {
